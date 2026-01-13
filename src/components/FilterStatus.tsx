@@ -42,21 +42,20 @@ export default function FilterStatusUI({
   value,
   onChange,
 }: {
-  value: "all" | "Published" | "Unpublished" | "Draft";
-  onChange: (v: "all" | "Published" | "Unpublished" | "Draft") => void;
+  value: "all" | "Published" | "Draft";
+  onChange: (v: "all" | "Published" | "Draft") => void;
 }) {
   return (
     <div className="flex items-center gap-3">
       <label className="text-sm font-medium text-gray-700 dark:text-gray-200">
-        Status
+        Filter Status
       </label>
-      <SelectField<"all" | "Published" | "Unpublished" | "Draft">
+      <SelectField<"all" | "Published" | "Draft">
         value={value}
         onChange={onChange}
       >
         <option value="all">All</option>
         <option value="Published">Published</option>
-        <option value="Unpublished">Unpublished</option>
         <option value="Draft">Draft</option>
       </SelectField>
     </div>
