@@ -44,9 +44,9 @@ export default async function NoticePage() {
     fetchCount("Draft"),
   ]);
 
-  // optional formatting for display (leading zero for draft example)
+
   const draftDisplay = draftCount < 10 ? `0${draftCount}` : String(draftCount);
-   const activeDisplay = activeCount < 10 ? `0${activeCount}` : String(activeCount);
+  const activeDisplay = activeCount < 10 ? `0${activeCount}` : String(activeCount);
 
   return (
     <div className="space-y-6">
