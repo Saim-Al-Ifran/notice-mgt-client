@@ -377,9 +377,9 @@ export default function CreateNoticeForm() {
               Upload attachments
             </label>
 
-            <span className="text-sm text-gray-600"> such as policy documents, images, or reference files</span>
+            <span className="text-sm text-gray-600"> such as policy documents, images, or reference files(small size 1MB,  2MB)</span>
 
-            <p className="text-xs text-gray-500 mt-1">Accepted formats: JPG, PNG, PDF • Max 5 files</p>
+            <p className="text-xs text-gray-500 mt-1">Accepted formats: JPG, PNG</p>
           </div>
 
           {attachments.length > 0 && (

@@ -51,7 +51,7 @@ export default function NoticeList() {
       setItems(mapped);
       setTotal(json.pagination?.totalItems ?? mapped.length);
 
-      // If current page is out of range, clamp it
+ 
       const totalPages = json.pagination?.totalPages ?? Math.ceil((json.pagination?.totalItems ?? mapped.length) / perPage);
       if (totalPages > 0 && page > totalPages) {
         setPage(totalPages);
@@ -78,8 +78,6 @@ export default function NoticeList() {
   // Listen for global status-updated events and refresh list
   useEffect(() => {
     const onUpdated = (e: any) => {
-      // If event provides detail with id and status, you could update in-place.
-      // For simplicity, re-fetch current page to keep server in sync.
       fetchNotices();
     };
     window.addEventListener("notice:status-updated", onUpdated as EventListener);

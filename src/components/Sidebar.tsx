@@ -118,17 +118,15 @@ export default function Sidebar({ open, setOpen }: SidebarProps) {
             >
               <div className="flex items-center gap-3">
                 <UsersIcon className="w-5 h-5 text-gray-600" />
-                <span className="text-sm font-medium text-gray-700">Employee</span>
+                <span className="text-sm font-medium text-gray-700">Notice Board</span>
               </div>
               <ChevronDownIcon className={`w-4 h-4 text-gray-500 ${openEmployee ? "rotate-180" : ""}`} />
             </button>
 
             {openEmployee && (
-              <div className="ml-6 flex flex-col gap-1">
-                <Link href="/employees" className="text-sm text-gray-600">Employee Database</Link>
-                <Link href="/employees/new" className="text-sm text-gray-600">Add New Employee</Link>
-                <Link href="/employees/performance" className="text-sm text-gray-600">Performance Report</Link>
-                <Link href="/employees/history" className="text-sm text-gray-600">Performance History</Link>
+              <div className="mt-2 ml-10 flex flex-col gap-1">
+                <Link href="/notices" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300">All Notices</Link>
+                <Link href="/notices/new" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300">Add New Notice</Link>
               </div>
             )}
 
